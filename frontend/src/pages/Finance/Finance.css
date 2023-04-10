@@ -1,0 +1,24 @@
+.Finance{
+    height: 1200px;  
+    background: url(https://auto1-homepage.prod.mp.auto1.cloud/2.12.3/images/map.png);
+    background-color: rgba(4, 36, 78, 0.808);
+    text-align: center;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+}
+
+.Financebtn{
+    width: 250px;
+    height: 55px;
+    background: black;
+    color: aliceblue;
+    border-radius: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 600px;
+  
+  }
+  .Checkbox{
+    margin-right:800px ;
+  }

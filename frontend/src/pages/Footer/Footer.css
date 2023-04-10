@@ -1,0 +1,13 @@
+.main-Footer{
+display: flex;
+background: rgb(10, 43, 94);
+height: 150px;
+
+}
+
+.row{
+    display: flex;
+    max-height: 100vh;
+    color: rgb(255, 255, 255);
+    font-size: large;
+}

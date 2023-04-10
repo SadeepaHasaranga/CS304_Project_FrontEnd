@@ -1,0 +1,19 @@
+.cal{
+    background: url(https://auto1-homepage.prod.mp.auto1.cloud/2.12.3/images/map.png);
+    background-color: rgb(60, 63, 48);
+   height: 1200px;
+
+
+}
+
+.cal-btn{
+
+    width: 500px;
+    height: 55px;
+    background: black;
+    color: aliceblue;
+    border-radius: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 150px;
+}

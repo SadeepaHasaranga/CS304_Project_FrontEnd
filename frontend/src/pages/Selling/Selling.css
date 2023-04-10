@@ -1,0 +1,46 @@
+.sell-page {
+  height: 1200px;
+  background: url(https://auto1-homepage.prod.mp.auto1.cloud/2.12.3/images/map.png);
+  background-color: rgb(34, 27, 27);
+  text-align: center;
+  color: rgb(250, 246, 246);
+  display: flex;
+  flex-direction: column;
+}
+
+.input-area {
+  width: 300px;
+  height: 40px;
+
+  /* border-radius: 0px; */
+}
+
+.field {
+  display: flex;
+}
+
+.input-area {
+  width: full;
+  font-size: 120%;
+  margin: 1.2rem;
+}
+
+form-items {
+  width: 80;
+  font-weight: 800;
+}
+.btn-sell {
+  width: 500px;
+  height: 55px;
+  background: black;
+  color: aliceblue;
+  border-radius: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  margin-left: 150px;
+}
+.input-file {
+  width: 525px;
+  height: 50px;
+  /* color: aquamarine; */
+}

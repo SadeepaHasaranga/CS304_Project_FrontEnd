@@ -1,0 +1,17 @@
+.contactus-background{
+
+    height: 1000px;
+    background: url(https://auto1-homepage.prod.mp.auto1.cloud/2.12.3/images/map.png);
+    background-color: rgb(60, 63, 48);
+    text-align: center;
+    color: rgb(254, 253, 255);
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+

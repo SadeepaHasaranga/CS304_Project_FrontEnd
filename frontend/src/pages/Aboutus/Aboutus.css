@@ -1,0 +1,10 @@
+.aboutfull {
+  height: 660px;
+  width: 100%;
+  background: url(https://auto1-homepage.prod.mp.auto1.cloud/2.12.3/images/map.png);
+  background-color: rgb(60, 63, 48);
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
