@@ -1,5 +1,7 @@
 import React from "react";
 import "./Buying.css";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Buying = () => {
   return (
     <div>
@@ -29,7 +31,9 @@ const Buying = () => {
             placeholder="Enter car model"
           />
         </div>
-        <button className="buy "> Buy</button>
+        <button className="buy ">
+           <Link to="/SellingResult">Buy</Link>
+           </button>
       </div>
       {/* <button className='buy'>Buy</button> */}
     </div>

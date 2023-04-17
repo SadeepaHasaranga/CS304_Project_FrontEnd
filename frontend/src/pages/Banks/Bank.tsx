@@ -2,12 +2,20 @@ import React, { useState } from "react";
 import "./Bank.css";
 
 function UserProfile() {
+  interface User{
+    name:String
+    phonenum:string
+  }
   // const [username, setUsername] = useState('John Doe');
   // const [email, setEmail] = useState('johndoe@example.com');
   // const [phone, setPhone] = useState('123-456-7890');
   // const [location, setLocation] = useState('New York, NY');
   // const[password,setPassword] = useState('12345682')
-  const [user, setUser] = useState<any>();
+  // const [user, setUser] = useState<any>();
+
+  const userJson = localStorage.getItem("loggedUser")
+  const user: User | null = userJson ? JSON.parse(userJson).user : null
+console.log("AAA>>",user)
 
   // const handleChange = ((e:any)=>{
   //   const{name,value} = e.target;
@@ -41,7 +49,7 @@ function UserProfile() {
   return (
     <div className="max-w-lg mx-auto mt-12 bg-orange-300 shadow-md rounded px-8 pt-6 pb-8 mb-4">
       <form>
-        <h2 className="text-2xl font-medium mb-6">User Profile</h2>
+        <h2 className="text-2xl font-bold mb-6">User Profile</h2>
         {/* <form onSubmit={handleSubmit}> */}
         <div className="mb-4">
           <label
@@ -89,17 +97,17 @@ function UserProfile() {
         <div className="mb-6">
           <label
             className="block text-gray-700 font-bold mb-2"
-            htmlFor="location"
+            htmlFor="phonenumber"
           >
-            Location
+            Phone number
           </label>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-stone-950 font-bold leading-tight focus:outline-none focus:shadow-outline"
-            id="location"
+            id="phonenumber"
             type="text"
             // value={location}
             // onChange={handleLocationChange}
-            placeholder="Enter your location"
+            placeholder="Enter your new phonenumber"
           />
         </div>
 
@@ -109,6 +117,12 @@ function UserProfile() {
             type="submit"
           >
             Save Changes
+          </button>
+          <button
+            className="bg-red-500 hover:bg-black text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit"
+          >
+            Sign Out
           </button>
         </div>
       </form>
