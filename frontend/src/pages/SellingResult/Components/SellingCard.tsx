@@ -10,13 +10,23 @@ const SellingCard = ({
   name,
   telephone,
   image,
+  id,
 }: any) => {
+  const [names, setNames] = useState<any>();
+  useEffect(() => {
+    axios
+      .get(
+        `${process.env.REACT_APP_API_BASE_URL}/api/v1/upload/VehicleImages/${id}`
+      )
+      .then((res) => setNames(res.data))
+      .catch((err) => console.error(err));
+  }, []);
   return (
-    <div className=" w-[600px] bg-black h-[700px] rounded-[20px]">
+    <div className=" w-[600px] bg-black min-h-[100px] rounded-[20px] py-5">
       <div className="ml-[20px]">
-        <div className="flex justify-start pt-4">
+        <div className="flex justify-start">
           <div>
-            <h1 className="text-[30px] font-bold text-white ">Model :</h1>
+            <h3 className="text-[30px] font-bold text-white ">Model :</h3>
           </div>
           <div>
             <h1 className="text-[30px] ml-[20px] text-white">{model}</h1>
@@ -27,7 +37,7 @@ const SellingCard = ({
             <h1 className="text-[30px] font-bold text-white ">Price :</h1>
           </div>
           <div>
-            <h1 className="text-[30px] ml-[20px] text-white">{price}</h1>
+            <h1 className="text-[30px] ml-[20px] text-white">{price}LKR</h1>
           </div>
         </div>
         <div className="flex justify-start pt-4">
@@ -43,7 +53,7 @@ const SellingCard = ({
             <h1 className="text-[30px] font-bold text-white ">Milleage :</h1>
           </div>
           <div>
-            <h1 className="text-[30px] ml-[20px] text-white">{milleage}</h1>
+            <h1 className="text-[30px] ml-[20px] text-white">{milleage}km</h1>
           </div>
         </div>
         <div className="flex justify-start pt-4">
@@ -68,12 +78,20 @@ const SellingCard = ({
         </div>
       </div>
       <div>
-        <img
-          src={
-            "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-          }
+        {/* {image} */}
+        {names?.map((name: any, i: number) => (
+          <>
+            <img
+              key={i}
+              src={`${process.env.REACT_APP_API_BASE_URL}/api/v1/upload/VehicleImages/${id}/${name}`}
+              alt="pic"
+            />
+          </>
+        ))}
+        {/* <img
+          src="https://cdn.motor1.com/images/mgl/l9KLM/s1/2022-toyota-aqua-jdm.webp"
           alt="pic"
-        />
+        /> */}
       </div>
     </div>
   );

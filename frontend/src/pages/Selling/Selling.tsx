@@ -3,6 +3,7 @@ import "./Selling.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 const Selling = () => {
   const navigate = useNavigate();
@@ -58,14 +59,15 @@ const Selling = () => {
 
           var config1 = {
             method: "post",
-            url: `${process.env.REACT_APP_API_BASE_URL}api/v1/upload/uploadvehicleimages/${response.data.vehicleID}`,
+            url: `${process.env.REACT_APP_API_BASE_URL}/api/v1/upload/uploadvehicleimages/${response.data.vehicleID}`,
             headers: {},
             data: formData,
           };
           axios(config1)
             .then(function (res) {
               console.log(res.data);
-              window.alert("send message");
+              toast.success("done");
+              // window.alert("send message");
             })
             .catch(function (error) {
               console.log(error);
