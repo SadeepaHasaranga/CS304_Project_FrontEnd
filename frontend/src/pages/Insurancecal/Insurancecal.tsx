@@ -1,37 +1,35 @@
-import React, { useState } from 'react'
-import './Insurancecal.css'
-import Callist from '../../Components/callist'
-import Radio from '../../Components/Radio'
+import React, { useState } from "react";
+import "./Insurancecal.css";
+import Callist from "../../Components/callist";
+import Radio from "../../Components/Radio";
 
 const Insurancecal = () => {
-  const [value, setValue] = useState<any>();
-  const [model, setModel] = useState<any>();
-  const [mileage, setMileage] = useState<any>();
+   const [model, setModel] = useState<string>("Aqua"); // Example: model state with default value "Aqua"
+   const [mileage, setMileage] = useState<number>(0); // Example: mileage state with default value 0
+   const [value, setValue] = useState<number>(0);
   const [year, setYear] = useState<any>();
-  const[result,setResult] = useState<any>();
-  const [options, setOptions] = useState<any>({
-    dsfs:false,
+  
 
-  })
- const handleValueChange = (e:any) => {
-  setValue(Number(e.target.value));
-};
-const handleModelChange = (e:any) => {
-  setModel(e.target.value);
-};
-const handleMileageChange = (e:any) => {
-  setMileage(Number(e.target.value));
-};
-const handleYearChange = (e:any) => {
-  setYear(Number(e.target.value));
-};
- 
+  const [sum, setSum] = useState<number>(0);
+  const calculate = () => {
+    let m = 0;
+    let mil = 0;
+    let y = 2000;
+    if (model === "Aqua") {
+      // Update: Use strict equality operator (===) for comparison
+      m = 2000;
+    } else {
+      m = 3000;
+    }
 
+    if (mileage < 50000) {
+      mil = 3000;
+    } else {
+      mil = 5000;
+    }
 
-
-const calcuator=()=>{
-    return value*0.01+options.dsfs*2000
-  }
+    setSum(m + mil + value * 0.01 + y); // Update: Removed unnecessary Number() conversions
+  };
   return (
     <div className="cal">
       <h1 className="font-bold"> Estimate your annual insurance fee</h1>
@@ -40,24 +38,22 @@ const calcuator=()=>{
         <Callist />
       </div>
       <div>
-        <label  className="font-bold">
-          Enter your valivation
-        </label>
+        <label className="font-bold">Enter your valivation</label>
         <input
           type="text"
           value={value}
           className="input-area1 font-bold m-4"
           placeholder="Vehicle value"
           style={{ marginLeft: "70px" }}
+          onChange={(e) => setValue(parseInt(e.target.value))}
         />
       </div>
       <div>
-        <label className="font-bold">
-          Brand
-        </label>
+        <label className="font-bold">Brand</label>
         <input
           type="text"
           value={model}
+          onChange={(e) => setModel(e.target.value)}
           className="input-area2 font-bold text-#fffbeb m-4"
           placeholder="Enter Brand"
           style={{ marginLeft: "180px" }}
@@ -89,13 +85,16 @@ const calcuator=()=>{
           className="input-area4 font-bold m-4"
           placeholder="Mileage"
           style={{ marginLeft: "160px" }}
+          onChange={(e) => setMileage(parseInt(e.target.value))}
         />
       </div>
 
-      <button className="cal-btn">Calculate</button>
-      <h1 className='font-bold'>Your annul insurance fee:{result}</h1>
+      <button className="cal-btn" onClick={calculate}>
+        Calculate
+      </button>
+      <h1 className="font-bold">Your annul insurance fee:{sum}LKR</h1>
     </div>
   );
-}
+};
 
-export default Insurancecal
+export default Insurancecal;

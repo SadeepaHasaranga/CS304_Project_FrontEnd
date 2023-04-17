@@ -18,186 +18,182 @@ import Insurancecal from "./pages/Insurancecal/Insurancecal";
 import SeliingResult from "./pages/SellingResult/SeliingResult";
 import AfterLogin from "./pages/AfterLogin/AfterLogin";
 import Admin from "./pages/Admin/Admin";
-import Support from "./pages/Support/Support"
+import Support from "./pages/Support/Support";
 import { ToastContainer } from "react-toastify";
 function App() {
   return (
     <div>
+      <Router>
+        <Routes>
+          <Route
+            path="/Home"
+            element={
+              <>
+                <Navbar />
+                <Home />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/Login"
+            element={
+              <>
+                <Navbar />
+                <Login />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/Selling"
+            element={
+              <>
+                <Navbar />
+                <Selling />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/Buying"
+            element={
+              <>
+                <Navbar />
+                <Buying />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/Signup"
+            element={
+              <>
+                <Navbar />
+                <Signup />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/Insurance"
+            element={
+              <>
+                <Navbar />
+                <Insurance />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/Aboutus"
+            element={
+              <>
+                <Navbar />
+                <Aboutus />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/Contactus"
+            element={
+              <>
+                <Navbar />
+                <Contactus />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/Bank"
+            element={
+              <>
+                <Navbar />
+                <Bank />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/Finance"
+            element={
+              <>
+                <Navbar />
+                <Finance />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/Insurancecal"
+            element={
+              <>
+                <Navbar />
+                <Insurancecal />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/sellingresult/:selectModel"
+            element={
+              <>
+                <Navbar />
+                <SeliingResult />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/AfterLogin"
+            element={
+              <>
+                <Navbar />
+                <AfterLogin />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/Admin"
+            element={
+              <>
+                <Navbar />
+                <Admin />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/Support"
+            element={
+              <>
+                <Navbar />
+                <Support />
+                <Footer />
+              </>
+            }
+          />
+          {/* <Route path=></> */}
+          {/* <Route path='/Home' element={<><Footer/><Home /></>} /> */}
+        </Routes>
+      </Router>
 
-    <Router>
-      <Routes>
-        <Route
-          path="/Home"
-          element={
-            <>
-              <Navbar />
-              <Home />
-              <Footer />
-            </>
-          }
-          />
-        <Route
-          path="/Login"
-          element={
-            <>
-              <Navbar />
-              <Login />
-              <Footer />
-            </>
-          }
-          />
-        <Route
-          path="/Selling"
-          element={
-            <>
-              <Navbar />
-              <Selling />
-              <Footer />
-            </>
-          }
-          />
-        <Route
-          path="/Buying"
-          element={
-            <>
-              <Navbar />
-              <Buying />
-              <Footer />
-            </>
-          }
-          />
-        <Route
-          path="/Signup"
-          element={
-            <>
-              <Navbar />
-              <Signup />
-              <Footer />
-            </>
-          }
-          />
-        <Route
-          path="/Insurance"
-          element={
-            <>
-              <Navbar />
-              <Insurance />
-              <Footer />
-            </>
-          }
-          />
-        <Route
-          path="/Aboutus"
-          element={
-            <>
-              <Navbar />
-              <Aboutus />
-              <Footer />
-            </>
-          }
-          />
-        <Route
-          path="/Contactus"
-          element={
-            <>
-              <Navbar />
-              <Contactus />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/Bank"
-          element={
-            <>
-              <Navbar />
-              <Bank />
-              <Footer />
-            </>
-          }
-          />
-        <Route
-          path="/Finance"
-          element={
-            <>
-              <Navbar />
-              <Finance />
-              <Footer />
-            </>
-          }
-          />
-        <Route
-          path="/Insurancecal"
-          element={
-            <>
-              <Navbar />
-              <Insurancecal />
-              <Footer />
-            </>
-          }
-          />
-        <Route
-          path="/sellingresult"
-          element={
-            <>
-              <Navbar />
-              <SeliingResult />
-              <Footer />
-            </>
-          }
-          />
-        <Route
-          path="/AfterLogin"
-          element={
-            <>
-              <Navbar />
-              <AfterLogin />
-              <Footer />
-            </>
-          }
-          />
-        <Route
-          path="/Admin"
-          element={
-            <>
-              <Navbar />
-              <Admin />
-              <Footer />
-            </>
-          }
-          />
-        <Route
-          path="/Support"
-          element={
-            <>
-              <Navbar />
-              <Support />
-              <Footer />
-            </>
-          }
-          />
-        {/* <Route path=></> */}
-        {/* <Route path='/Home' element={<><Footer/><Home /></>} /> */}
-      </Routes>
-    </Router>
-
- <ToastContainer
-position="top-right"
-autoClose={5000}
-hideProgressBar={false}
-newestOnTop={false}
-closeOnClick
-rtl={false}
-pauseOnFocusLoss
-draggable
-pauseOnHover
-theme="colored"
-/>
-<ToastContainer />
-
-</div>
-
-  
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
+      <ToastContainer />
+    </div>
   );
 }
 

@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import SellingCard from "./Components/SellingCard";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const SeliingResult = () => {
+  let { selectModel } = useParams();
+  console.log(selectModel);
   const sampleData = [
     {
       id: 1,
@@ -30,20 +32,33 @@ const SeliingResult = () => {
   ];
 
   const [vehicle, setVehicle] = useState<any>([]);
+  const [filteredVehicles, setFilteredVehicles] = useState<any>([]);
 
   useEffect(() => {
     axios
       .get(`${process.env.REACT_APP_API_BASE_URL}/api/v1/vehicle/getVehicles`)
-      .then((res) => setVehicle(res.data))
+      .then((res) => {
+        setVehicle(res.data);
+        console.log(res.data);
+        setFilteredVehicles(res.data);
+      })
       .catch((err) => console.error(err));
   }, []);
 
-  console.log("AAA>>>", vehicle);
+  useEffect(() => {
+    const filteredData = vehicle?.filter((emp: any) => {
+      emp.model.toLowerCase().includes(selectModel?.toLowerCase());
+    });
+    setFilteredVehicles(filteredData);
+    console.log(filteredData);
+  }, []);
+
+  // console.log("AAA>>>", vehicle);
 
   return (
     <div className="ml-[80px]">
       <div className="grid grid-flow-row grid-cols-2 gap-4">
-        {vehicle?.map((a: any) => (
+        {filteredVehicles?.map((a: any, i: number) => (
           <>
             <SellingCard
               model={a.model}
@@ -54,6 +69,7 @@ const SeliingResult = () => {
               telephone={a.phonenum}
               image={a.image}
               id={a.vehicleID}
+              key={i}
             />
           </>
         ))}

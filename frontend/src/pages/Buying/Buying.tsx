@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Buying.css";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 const Buying = () => {
+  const [model,setModel]=useState<string>("");
   return (
     <div>
       <div className="buy-page">
@@ -29,11 +30,12 @@ const Buying = () => {
             id="model"
             className="buycar m-4 ml-5 text-stone-950 font-bold"
             placeholder="Enter car model"
+            onChange={(e) => setModel(e.target.value)}
           />
         </div>
         <button className="buy ">
-           <Link to="/SellingResult">Buy</Link>
-           </button>
+          <Link to={`/SellingResult/${model}`}>Buy</Link>
+        </button>
       </div>
       {/* <button className='buy'>Buy</button> */}
     </div>
