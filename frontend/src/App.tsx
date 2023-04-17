@@ -136,7 +136,7 @@ function App() {
             }
           />
           <Route
-            path="/sellingresult/:selectModel"
+            path="/sellingresult/:model/:min/:max"
             element={
               <>
                 <Navbar />

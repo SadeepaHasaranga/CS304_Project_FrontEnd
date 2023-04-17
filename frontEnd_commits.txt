@@ -1,0 +1,77 @@
+commit 7db722a495822e2ef780a34f731c79d142bde8f8
+Author: SadeepaHasaranga <sadeepa996@gmail.com>
+Date:   Mon Apr 17 23:22:47 2023 +0530
+
+    test
+
+commit 2ed5d3757020e4518ee981540e44c0aa98743f0c
+Author: SadeepaHasaranga <sadeepa996@gmail.com>
+Date:   Mon Apr 17 23:10:23 2023 +0530
+
+    add calculater
+
+commit 2baec4c7efd07a95b337b3519406777cb99ef413
+Author: SadeepaHasaranga <sadeepa996@gmail.com>
+Date:   Mon Apr 17 22:02:28 2023 +0530
+
+    Selling done
+
+commit ad877d4765b0f215f37e42f35979d2d5f452f97d
+Author: SadeepaHasaranga <sadeepa996@gmail.com>
+Date:   Mon Apr 17 22:01:54 2023 +0530
+
+    insurance done
+
+commit c4bab6bd49e75ade179e263577610bfb974a58d4
+Author: SadeepaHasaranga <sadeepa996@gmail.com>
+Date:   Mon Apr 17 22:01:08 2023 +0530
+
+    Support,signup done
+
+commit 5a97c4086d0bd6852973e92232575d2e4f50d543
+Author: SadeepaHasaranga <sadeepa996@gmail.com>
+Date:   Mon Apr 17 21:58:30 2023 +0530
+
+    Login done
+
+commit 177f1af383944030ea3dc8f3666455751e1d1f92
+Author: SadeepaHasaranga <sadeepa996@gmail.com>
+Date:   Mon Apr 17 21:57:38 2023 +0530
+
+    Insurance done
+
+commit 7b90518ebcef5f5181a538a68b1ad58383161d39
+Author: SadeepaHasaranga <sadeepa996@gmail.com>
+Date:   Mon Apr 17 21:56:45 2023 +0530
+
+    Finance done,Home done
+
+commit 64f38528d08245938dc0774b5263e97480b962c7
+Author: SadeepaHasaranga <sadeepa996@gmail.com>
+Date:   Mon Apr 17 21:55:57 2023 +0530
+
+    AfterLogin done,Bank done,Buying done
+
+commit 6eb7ed5f618e0b753676d55151d69ce595ae8211
+Author: SadeepaHasaranga <sadeepa996@gmail.com>
+Date:   Mon Apr 17 21:55:07 2023 +0530
+
+    Navbar done,Admin done
+
+commit 6c537a0897d11154fbb76e36a42bba48087bae0a
+Author: SadeepaHasaranga <sadeepa996@gmail.com>
+Date:   Mon Apr 17 21:54:16 2023 +0530
+
+    App.tsx updated,Financelist updated
+
+commit 1b063f7939a6de62c4c7bc7b490637f4e7fdf160
+Author: SadeepaHasaranga <sadeepa996@gmail.com>
+Date:   Mon Apr 17 21:52:54 2023 +0530
+
+    Admin done,Home done,Login done
+
+commit 64e601262541f903737bf2c3dd350bc024758023
+Author: SadeepaHasaranga <sadeepa996@gmail.com>
+Date:   Tue Apr 11 01:26:39 2023 +0530
+
+    ADded the frontend and the backend

@@ -3,7 +3,9 @@ import "./Buying.css";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 const Buying = () => {
-  const [model,setModel]=useState<string>("");
+  const [model, setModel] = useState<string>("");
+  const [min, setmin] = useState<number>(0);
+  const [max, setmax] = useState<number>(10000000000000);
   return (
     <div>
       <div className="buy-page">
@@ -33,8 +35,34 @@ const Buying = () => {
             onChange={(e) => setModel(e.target.value)}
           />
         </div>
+
+        <div>
+          <label htmlFor="Vehictype" className="lable1">
+            Min Price (Rs)
+          </label>
+          <input
+            type="text"
+            id="Vehitype"
+            className="buycar m-4 text-stone-950 font-bold"
+            placeholder="Enter min price"
+            onChange={(e) => setmin(parseInt(e.target.value))}
+          />
+        </div>
+
+        <div>
+          <label htmlFor="Vehictype" className="lable1">
+            Max Price (Rs)
+          </label>
+          <input
+            type="text"
+            id="Vehitype"
+            className="buycar m-4 text-stone-950 font-bold"
+            placeholder="Enter max price"
+            onChange={(e) => setmax(parseInt(e.target.value))}
+          />
+        </div>
         <button className="buy ">
-          <Link to={`/SellingResult/${model}`}>Buy</Link>
+          <Link to={`/SellingResult/${model}/${min}/${max}`}>Buy</Link>
         </button>
       </div>
       {/* <button className='buy'>Buy</button> */}

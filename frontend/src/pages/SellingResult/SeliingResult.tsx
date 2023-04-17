@@ -4,8 +4,8 @@ import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 
 const SeliingResult = () => {
-  let { selectModel } = useParams();
-  console.log(selectModel);
+  let { model, min, max } = useParams();
+  console.log(min, max);
   const sampleData = [
     {
       id: 1,
@@ -36,21 +36,15 @@ const SeliingResult = () => {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_API_BASE_URL}/api/v1/vehicle/getVehicles`)
+      .get(
+        `${process.env.REACT_APP_API_BASE_URL}/api/v1/vehicle/getvehiclesbymodel/${model}/${min}/${max}`
+      )
       .then((res) => {
         setVehicle(res.data);
         console.log(res.data);
-        setFilteredVehicles(res.data);
+        // setFilteredVehicles(res.data);
       })
       .catch((err) => console.error(err));
-  }, []);
-
-  useEffect(() => {
-    const filteredData = vehicle?.filter((emp: any) => {
-      emp.model.toLowerCase().includes(selectModel?.toLowerCase());
-    });
-    setFilteredVehicles(filteredData); 
-    // console.log(filteredData);
   }, []);
 
   // console.log("AAA>>>", vehicle);
@@ -58,21 +52,22 @@ const SeliingResult = () => {
   return (
     <div className="ml-[80px]">
       <div className="grid grid-flow-row grid-cols-2 gap-4">
-        {filteredVehicles?.map((a: any, i: number) => (
-          <>
-            <SellingCard
-              model={a.model}
-              price={a.price}
-              condition={a.cndition}
-              milleage={a.mileage}
-              name={a.name}
-              telephone={a.phonenum}
-              image={a.image}
-              id={a.vehicleID}
-              key={i}
-            />
-          </>
-        ))}
+        {vehicle &&
+          vehicle?.map((a: any, i: number) => (
+            <>
+              <SellingCard
+                model={a.model}
+                price={a.price}
+                condition={a.cndition}
+                milleage={a.mileage}
+                name={a.name}
+                telephone={a.phonenum}
+                image={a.image}
+                id={a.vehicleID}
+                key={i}
+              />
+            </>
+          ))}
         {/* ))} */}
       </div>
       <div>
