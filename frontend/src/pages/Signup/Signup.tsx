@@ -25,7 +25,7 @@ const Signup = () => {
 
     var config = {
       method: "post",
-      url: `${process.env.REACT_APP_API_BASE_URL}api/v1/user/save`,
+      url: `${process.env.REACT_APP_API_BASE_URL}/api/v1/user/save`,
       headers: {
         "Content-Type": "application/json",
       },
@@ -47,7 +47,7 @@ const Signup = () => {
   return (
     <div className="signup-page">
       <div>
-        <h1 className="Signing">Create Your Account</h1>
+        <h1 className="Signing text-white">Create Your Account</h1>
       </div>
       <form action="" className="form">
         <div className="flex justify-center flex-col items-center">
@@ -57,7 +57,7 @@ const Signup = () => {
               type="text"
               id="name"
               name="name"
-              className="User m-4"
+              className="User m-4 text-black"
               placeholder="Enter your name"
               style={{ marginLeft: "60px" }}
               value={userData.name}
@@ -70,7 +70,7 @@ const Signup = () => {
               type="text"
               id="email"
               name="email"
-              className="User m-4"
+              className="User m-4 text-black"
               onChange={handleChange}
               placeholder="Email"
               value={userData.email}
@@ -84,7 +84,7 @@ const Signup = () => {
               id="phone_num"
               onChange={handleChange}
               name="phone_num"
-              className="User m-4"
+              className="User m-4 text-black"
               placeholder="Phone Number"
               style={{ marginLeft: "20px" }}
               value={userData.phone_num}
@@ -97,7 +97,7 @@ const Signup = () => {
               onChange={handleChange}
               id="nic"
               name="nic"
-              className="User m-4"
+              className="User m-4 text-black"
               placeholder="NIC"
               value={userData.nic}
               style={{ marginLeft: "130px" }}
@@ -110,7 +110,7 @@ const Signup = () => {
               onChange={handleChange}
               id="address"
               name="address"
-              className="User m-4"
+              className="User m-4 text-black"
               placeholder="Address"
               value={userData.address}
               style={{ marginLeft: "85px" }}
@@ -122,7 +122,7 @@ const Signup = () => {
               type="password"
               id="password"
               name="password"
-              className="User m-4"
+              className="User m-4 text-black"
               onChange={handleChange}
               placeholder="Password"
               style={{ marginLeft: "75px" }}
@@ -137,11 +137,11 @@ const Signup = () => {
               name="role"
               value={userData.role}
               onChange={handleChange}
-              className="m-4"
+              className="m-4 text-black"
             >
-              <option value="Buyer">Buyer</option>
-              <option value="Seller">Seller</option>
-              <option value="Both">Both</option>
+              <option value="Buyer" className="text-black">Buyer</option>
+              <option value="Seller" className="text-black">Seller</option>
+              <option value="Both" className="text-black">Both</option>
             </select>
           </div>
 
