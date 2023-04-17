@@ -25,7 +25,7 @@ const Finance = () => {
 
     var config = {
       method:'post',
-      url: `${process.env.REACT_APP_API_BASE_URL}api/v1/finance/save`,
+      url: `${process.env.REACT_APP_API_BASE_URL}/api/v1/finance/save`,
       headers: { "Content-Type": "application/json; charset=utf-8" },
       data : data
 };
@@ -50,7 +50,7 @@ console.log("AAA>>",financeData)
 
 
   return (
-    <div className='Finance'><h1>Enter the your details</h1>
+    <div className='Finance font-bold '><h1>Enter the your details</h1>
     <div className='Checkbox'>
       <Financelist
       Finance={financeData.company}
@@ -62,7 +62,7 @@ console.log("AAA>>",financeData)
             type="text"
             id="name"
             name="name"
-            className="input-area"
+            className="input-area m-4"
             value={financeData.name}
             onChange={handleChange}
             placeholder="Name"
@@ -75,11 +75,11 @@ console.log("AAA>>",financeData)
             type="text"
             id="address"
             name="address"
-            className="input-area"
+            className="input-area m-4"
             value={financeData.address}
             onChange={handleChange}
             placeholder="Name"
-            style={{ marginLeft: "100px" }}
+            style={{ marginLeft: "80px" }}
           />
         </div>
         <div>
@@ -88,7 +88,7 @@ console.log("AAA>>",financeData)
             type="text"
             id="email"
             name="email"
-            className="input-area"
+            className="input-area m-4"
             value={financeData.email}
             onChange={handleChange}
             placeholder="Name"
@@ -101,11 +101,11 @@ console.log("AAA>>",financeData)
             type="text"
             id="phonenum"
             name="phonenum"
-            className="input-area"
+            className="input-area m-4"
             value={financeData.phonenum}
             onChange={handleChange}
             placeholder="Name"
-            style={{ marginLeft: "100px" }}
+            style={{ marginLeft: "25px" }}
           />
         </div>
 
