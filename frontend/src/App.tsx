@@ -17,8 +17,13 @@ import Finance from "./pages/Finance/Finance";
 import Insurancecal from "./pages/Insurancecal/Insurancecal";
 import SeliingResult from "./pages/SellingResult/SeliingResult";
 import AfterLogin from "./pages/AfterLogin/AfterLogin";
+import Admin from "./pages/Admin/Admin";
+import Support from "./pages/Support/Support"
+import { ToastContainer } from "react-toastify";
 function App() {
   return (
+    <div>
+
     <Router>
       <Routes>
         <Route
@@ -30,7 +35,7 @@ function App() {
               <Footer />
             </>
           }
-        />
+          />
         <Route
           path="/Login"
           element={
@@ -40,7 +45,7 @@ function App() {
               <Footer />
             </>
           }
-        />
+          />
         <Route
           path="/Selling"
           element={
@@ -50,7 +55,7 @@ function App() {
               <Footer />
             </>
           }
-        />
+          />
         <Route
           path="/Buying"
           element={
@@ -60,7 +65,7 @@ function App() {
               <Footer />
             </>
           }
-        />
+          />
         <Route
           path="/Signup"
           element={
@@ -70,7 +75,7 @@ function App() {
               <Footer />
             </>
           }
-        />
+          />
         <Route
           path="/Insurance"
           element={
@@ -80,7 +85,7 @@ function App() {
               <Footer />
             </>
           }
-        />
+          />
         <Route
           path="/Aboutus"
           element={
@@ -90,7 +95,7 @@ function App() {
               <Footer />
             </>
           }
-        />
+          />
         <Route
           path="/Contactus"
           element={
@@ -110,7 +115,7 @@ function App() {
               <Footer />
             </>
           }
-        />
+          />
         <Route
           path="/Finance"
           element={
@@ -120,7 +125,7 @@ function App() {
               <Footer />
             </>
           }
-        />
+          />
         <Route
           path="/Insurancecal"
           element={
@@ -130,7 +135,7 @@ function App() {
               <Footer />
             </>
           }
-        />
+          />
         <Route
           path="/sellingresult"
           element={
@@ -140,7 +145,7 @@ function App() {
               <Footer />
             </>
           }
-        />
+          />
         <Route
           path="/AfterLogin"
           element={
@@ -150,11 +155,49 @@ function App() {
               <Footer />
             </>
           }
-        />
+          />
+        <Route
+          path="/Admin"
+          element={
+            <>
+              <Navbar />
+              <Admin />
+              <Footer />
+            </>
+          }
+          />
+        <Route
+          path="/Support"
+          element={
+            <>
+              <Navbar />
+              <Support />
+              <Footer />
+            </>
+          }
+          />
         {/* <Route path=></> */}
         {/* <Route path='/Home' element={<><Footer/><Home /></>} /> */}
       </Routes>
     </Router>
+
+ <ToastContainer
+position="top-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="colored"
+/>
+<ToastContainer />
+
+</div>
+
+  
   );
 }
 

@@ -28,9 +28,9 @@ export default function SelectAutoWidth({Finance,handleChange}:any) {
           <MenuItem value="">
             <em>None</em>
           </MenuItem>
-          <MenuItem value={1}>Softlogic</MenuItem>
-          <MenuItem value={2}>Nations Trust</MenuItem>
-          <MenuItem value={3}>Commercial</MenuItem>
+          <MenuItem value={"Softlogic"}>Softlogic</MenuItem>
+          <MenuItem value={"Nationstrust"}>Nations Trust</MenuItem>
+          <MenuItem value={"Commercial"}>Commercial</MenuItem>
         </Select>
       </FormControl>
     </div>
