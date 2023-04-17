@@ -25,7 +25,7 @@ const Insurance = () => {
 
     var config = {
       method: "post",
-      url: `${process.env.REACT_APP_API_BASE_URL}api/v1/bank/save`,
+      url: `${process.env.REACT_APP_API_BASE_URL}/api/v1/bank/save`,
       headers: { "Content-Type": "application/json; charset=utf-8" },
       data: data,
     };
@@ -40,7 +40,7 @@ const Insurance = () => {
   };
 
   return (
-    <div className="Insurance">
+    <div className="Insurance font-bold">
       <h1>Enter the your details</h1>
 
       <div className="checkbox">

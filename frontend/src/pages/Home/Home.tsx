@@ -24,7 +24,7 @@ import cslide6 from "../../photos/cslide6.jpg";
 import Bank from "../Banks/Bank";
 import CarSclider from "../../Components/CarSclider";
 
-const images = [car_home, carbmw, new_home];
+const images = [new_home,car_home,carbmw];
 const images1 = [new_home, carbmw, new_home];
 
 const Home = () => {
@@ -86,16 +86,16 @@ const Home = () => {
       <div>
         <img className="world" src={world} alt="" />
         <div className="diff">
-          <h1 className="m-4 font-bold">
+          <h1 className="m-4 font-bold text-rose-950">
             What makes Autocarsale.com different?
           </h1>
-          <p className="text-gray-700 text-base leading-7 mb-4 font-semibold m-4">
-            Acarsale.com offers its car trading professionals exclusive access
-            to a stock of more than 30,000
+          <p className="text-black text-base leading-7 mb-4 font-bold m-4">
+            Autocarsale.com offers its car trading professionals exclusive
+            access to a stock of more than 30,000
             <br /> inspected used cars, while taking care of the whole B2B
             transaction. This includes transport, car and document handling!
           </p>
-          <p className="text-gray-700 text-base leading-7 mb-4 font-semibold m-4">
+          <p className="text-black text-base leading-7 mb-4 font-bold m-4">
             Working with Autocarsale.com removes any barriers of buying and
             selling cars across Srilanka and makes car trading faster, easier
             and 100% digital. Start now by registering for free and benefit from
@@ -110,7 +110,9 @@ const Home = () => {
         </div>
       </div>
       <div className="minicarousel">
-        <h1 className="font-bold text-center mt-4">Find your Best car from us..</h1>
+        <h1 className="font-bold text-center mt-4">
+          Find your Best car from us..
+        </h1>
         <div className="h-[200px]">
           <CarSclider />
         </div>
