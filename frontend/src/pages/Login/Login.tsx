@@ -21,12 +21,12 @@ const Login = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log(user);
+    // console.log(user);
     // var data = JSON.stringify(user);
 
     var config = {
       method: "post",
-      url: `${process.env.REACT_APP_API_BASE_URL}login`,
+      url: `${process.env.REACT_APP_API_BASE_URL}/login`,
       headers: {
         "Content-Type": "application/json",
       },
@@ -35,22 +35,22 @@ const Login = () => {
 
     axios(config)
       .then(function (response) {
-        // console.log(JSON.stringify(response.data));
-        console.log(response);
-        if (response.data !== null) {
+        // console.log(response);
+        if (response.data.status == 1) {
+          // console.log(JSON.stringify(response.data));
+          localStorage.setItem(
+            "loggedUser",
+            JSON.stringify(response.data.data)
+          );
           navigate("/AfterLogin");
+        } else {
+          alert("Invalid password or email");
         }
       })
       .catch(function (error) {
         console.log(error);
       });
   };
-
-  // const handleSignIn = (event) => {
-  //   event.preventDefault();
-  //   // Do sign-in logic here
-  //   setIsSignedIn(true);
-  // };
 
   return (
     <div className="full">
@@ -73,7 +73,7 @@ const Login = () => {
             onChange={handleChange}
             name="email"
             type="text"
-            className="input-text  text-slate-50"
+            className="input-text  text-black font-bold"
             placeholder="Email"
             value={user.email}
             style={{ marginLeft: "35px", paddingLeft: "10px" }}
@@ -86,7 +86,7 @@ const Login = () => {
               name="password"
               type="password"
               value={user.password}
-              className="input-text  text-slate-50 "
+              className="input-text  text-black font-bold "
               placeholder="Password"
               style={{ paddingLeft: "10px" }}
             />
