@@ -49,8 +49,8 @@ const SeliingResult = () => {
     const filteredData = vehicle?.filter((emp: any) => {
       emp.model.toLowerCase().includes(selectModel?.toLowerCase());
     });
-    setFilteredVehicles(filteredData);
-    console.log(filteredData);
+    setFilteredVehicles(filteredData); 
+    // console.log(filteredData);
   }, []);
 
   // console.log("AAA>>>", vehicle);
